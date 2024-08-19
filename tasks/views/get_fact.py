@@ -4,8 +4,8 @@ from dateutil import parser
 from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import render
 
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
-from integration_utils.its_utils.app_get_params import get_params_from_sources
+from is_demo.integration_utils.bitrix24 import main_auth
+from is_demo.integration_utils.its_utils.app_get_params import get_params_from_sources
 
 
 @main_auth(on_cookies=True)

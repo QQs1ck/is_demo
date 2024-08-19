@@ -1,7 +1,7 @@
 from django.http import HttpResponseForbidden, JsonResponse
 
-from integration_utils.bitrix24.models import BitrixUser
-from integration_utils.its_utils.app_get_params import get_params_from_sources
+from is_demo.integration_utils.bitrix24 import BitrixUser
+from is_demo.integration_utils.its_utils.app_get_params import get_params_from_sources
 
 
 @get_params_from_sources

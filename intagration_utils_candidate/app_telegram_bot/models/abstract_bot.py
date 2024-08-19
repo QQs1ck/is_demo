@@ -8,9 +8,8 @@ from django.db import models
 
 
 from intagration_utils_candidate.app_telegram_bot.common import get_command_from_message, escape_disallowed_tags
-from integration_utils.vendors import telegram
-from integration_utils.vendors.telegram import Bot
-from integration_utils.vendors.telegram.error import TimedOut, BadRequest, Unauthorized, RetryAfter, ChatMigrated
+from is_demo.integration_utils.vendors.telegram import Bot
+from is_demo.integration_utils.vendors import TimedOut, BadRequest, Unauthorized, RetryAfter, ChatMigrated
 from settings import ilogger
 
 
@@ -100,11 +99,10 @@ class AbstractBot(models.Model):
         """
 
         if self._client is None:
-            from django.conf import settings
 
             request = None
             if self.TELEGRAM_API_PROXY:
-                from integration_utils.vendors.telegram.utils.request import Request
+                from is_demo.integration_utils.vendors import Request
                 request = Request(proxy_url=self.TELEGRAM_API_PROXY)
 
             self._client = Bot(self.auth_token, base_url=self.TELEGRAM_API_BASE_URL, request=request)
@@ -164,13 +162,13 @@ class AbstractBot(models.Model):
         except TimedOut:
             ilogger.warning('handle_updates_timed_out', '{} handle_updates_timed_out'.format(self), log_to_cron=True)
             return 0, 0, 0
-        except telegram.error.Conflict as e:
+        except is_demo.integration_utils.vendors.telegram.error.Conflict as e:
             ilogger.warning('handle_updates_conflict', '{} use deleteWebhook to delete the webhook first'.format(self),
                             log_to_cron=True)
             if fail_silently:
                 return 0, 0, 0
             raise e
-        except telegram.error.Unauthorized as e:
+        except is_demo.integration_utils.vendors.telegram.error.Unauthorized as e:
             ilogger.warning('handle_updates_unauthorized', '{} Unauthorized'.format(self), log_to_cron=True)
             if fail_silently:
                 return 0, 0, 0

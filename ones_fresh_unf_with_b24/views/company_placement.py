@@ -3,9 +3,9 @@ import json
 from django.shortcuts import render
 from django.conf import settings
 
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
-from integration_utils.ones.functions.guids_converts import guid_to_non_separated
+from is_demo.integration_utils.ones.functions.guids_converts import guid_to_non_separated
 
 
 @main_auth(on_start=True, set_cookie=True)

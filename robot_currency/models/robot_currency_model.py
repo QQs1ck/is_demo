@@ -1,4 +1,4 @@
-from integration_utils.bitrix_robots.models import BaseRobot
+from is_demo.integration_utils.bitrix_robots import BaseRobot
 import requests as req
 
 

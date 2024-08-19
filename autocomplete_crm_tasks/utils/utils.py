@@ -1,4 +1,4 @@
-from integration_utils.bitrix24.models import BitrixUserToken
+from is_demo.integration_utils.bitrix24 import BitrixUserToken
 from django.utils import timezone
 from dateutil.relativedelta import relativedelta
 from copy import deepcopy as new

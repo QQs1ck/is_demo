@@ -3,7 +3,7 @@ from django.shortcuts import render
 from best_call_manager.utils.datetime_utils import get_now_date
 from best_call_manager.utils.setting_goals import setting_goals
 from best_call_manager.utils.api_methods import *
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
 
 @main_auth(on_cookies=True)

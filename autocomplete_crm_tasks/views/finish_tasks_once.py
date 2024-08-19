@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 from ..utils.utils import finish_tasks
 
 

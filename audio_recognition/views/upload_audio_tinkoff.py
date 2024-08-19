@@ -2,7 +2,7 @@ from django.shortcuts import render
 from audio_recognition.utils.get_text import get_text
 from audio_recognition.utils.mp3_to_wav import get_wav_path
 from audio_recognition.utils.file_manager import save_file, remove_file
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
 
 @main_auth(on_cookies=True)

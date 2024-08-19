@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from allcompbizproc.forms.select_bp import BPForm
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
 from allcompbizproc.models.bizprocmodel import BizprocModel
 

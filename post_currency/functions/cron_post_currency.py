@@ -1,4 +1,4 @@
-from integration_utils.bitrix24.models import BitrixUserToken
+from is_demo.integration_utils.bitrix24 import BitrixUserToken
 import datetime, requests
 from django.utils import timezone
 from bs4 import BeautifulSoup

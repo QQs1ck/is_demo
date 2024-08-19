@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 from ..forms import CallInfoForm
 
 

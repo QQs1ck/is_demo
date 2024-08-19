@@ -3,7 +3,7 @@
 import openai
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from django.conf import settings
-from integration_utils.vendors.telegram import Bot
+from is_demo.integration_utils.vendors.telegram import Bot
 
 MODEL = "gpt-3.5-turbo"
 openai.api_key = settings.OPEN_AI_API_KEY

@@ -1,10 +1,10 @@
-# Пример local_settings
+_local_settings.py# Пример local_settings
 # Измените данные на свои
 
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
-from integration_utils.bitrix24.local_settings_class import LocalSettingsClass
+from is_demo.integration_utils.bitrix24 import LocalSettingsClass
 
 TINKOFF_API_KEY = 'your-api-key'
 ENDPOINT_TINKOFF = 'your-secret-key'

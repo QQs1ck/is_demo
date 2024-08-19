@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
-from integration_utils.bitrix24.models.bitrix_user import BitrixUser
+from is_demo.integration_utils.bitrix24 import main_auth
+from is_demo.integration_utils.bitrix24 import BitrixUser
 from datetime import datetime, timedelta
 
 

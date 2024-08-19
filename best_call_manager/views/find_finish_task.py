@@ -2,7 +2,7 @@ import html
 from django.shortcuts import render
 from best_call_manager.utils.table_creation import get_html_row, get_html_table
 from best_call_manager.utils.api_methods import *
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
 
 @main_auth(on_cookies=True)

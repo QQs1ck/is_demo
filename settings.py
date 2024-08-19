@@ -140,7 +140,7 @@ STATICFILES_DIRS = [
 ]
 
 
-from integration_utils.its_utils.mute_logger import MuteLogger
+from is_demo.integration_utils import MuteLogger
 ilogger = MuteLogger()
 
 
@@ -154,7 +154,7 @@ except ImportError:
     warn('create local_settings.py')
 
 if not APP_SETTINGS:
-    from integration_utils.bitrix24.local_settings_class import LocalSettingsClass
+    from is_demo.integration_utils.bitrix24 import LocalSettingsClass
     APP_SETTINGS = LocalSettingsClass(
         # portal_domain='',
         app_domain='is_demo.it-solution.ru',

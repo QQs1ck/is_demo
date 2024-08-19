@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.conf import settings
 from django.http import Http404
 from ..utils.is_handler_bound import is_bound
-from integration_utils.bitrix24.bitrix_user_auth.main_auth import main_auth
+from is_demo.integration_utils.bitrix24 import main_auth
 
 
 @main_auth(on_cookies=True)

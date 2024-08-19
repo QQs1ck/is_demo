@@ -3,7 +3,7 @@ import time
 from .secondary_utils import *
 
 
-from integration_utils.vendors.telegram import Bot
+from is_demo.integration_utils.vendors.telegram import Bot
 
 
 def keep_call_info_synced(but, bot_token, calls_chat_id):

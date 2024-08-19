@@ -1,4 +1,4 @@
-from integration_utils.bitrix24.exceptions import BitrixApiError
+from is_demo.integration_utils.bitrix24 import BitrixApiError
 from django.conf import settings
 from dateutil.parser import parse
 

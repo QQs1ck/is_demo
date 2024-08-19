@@ -1,6 +1,6 @@
 from django.conf import settings
 
-from integration_utils.bitrix24.models import BitrixUserToken
+from is_demo.integration_utils.bitrix24 import BitrixUserToken
 
 
 def register_placement():
